@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InstaDash</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Video de fondo -->
+    <video id="background-video.mp4" autoplay loop muted>
+        <source src="background-video.mp4" type="video/mp4">
+        Tu navegador no soporta el formato de video.
+    </video>
+    <audio id="game-music" src="game-music.mp3"></audio>
+
+    <!-- Menú de inicio -->
+    <div id="menu-container">
+        <h1 id="game-title">InstaDash</h1>
+        <button id="start-button">Iniciar</button>
+        <div id="ranking-container">
+            <h2>Top 5 Puntuaciones</h2>
+            <ul id="ranking-list"></ul>
+        </div>
+        <div id="credits">Creado por: Facu Juarez</div>
+    </div>
+
+    <!-- Contenedor del juego -->
+    <div id="game-container" style="display: none;"></div>
+
+    <!-- Scripts de Firebase y del juego -->
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-analytics-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.19.1/firebase-database-compat.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>

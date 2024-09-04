@@ -1,0 +1,87 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Asegura que el video ocupe todo el ancho de la pantalla */
+    height: 100vh; /* Asegura que el video ocupe todo el alto de la pantalla */
+    object-fit: cover; /* Mantiene la proporción del video mientras cubre toda la pantalla */
+    object-position: center; /* Centra el video */
+    z-index: -1; /* Asegura que el video esté detrás de todo */
+}
+
+
+#menu-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1; /* Asegura que el menú esté encima del video */
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para asegurar la visibilidad */
+}
+
+#game-title {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+#start-button {
+    padding: 15px 30px;
+    font-size: 20px;
+    background-color: #ff4500;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+#start-button:hover {
+    background-color: #ff6347;
+}
+
+#ranking-container {
+    width: 80%;
+    max-width: 600px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semi-transparente para que se vea el video detrás */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#ranking-list {
+    list-style: none;
+    padding: 0;
+}
+
+#game-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1; /* Asegura que el juego esté encima del video */
+}
+
+#credits {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: white;
+}
