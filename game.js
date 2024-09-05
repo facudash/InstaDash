@@ -131,8 +131,7 @@ function startGame() {
     character.style.left = '10px';
     gameContainer.appendChild(character);
 
-    // Permitir que el jugador toque la pantalla para saltar
-    gameContainer.addEventListener('touchstart', jump);
+ 
 
     // Evento de teclado para saltar
     document.addEventListener('keydown', jump);
