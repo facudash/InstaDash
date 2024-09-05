@@ -46,7 +46,12 @@ function startGame() {
     const gameContainer = document.getElementById('game-container');
     let character, obstacle;
     let score = 0;
+// Permitir que el jugador toque la pantalla para saltar
+    gameContainer.addEventListener('touchstart', jump);
 
+    // Evento de teclado para saltar
+    document.addEventListener('keydown', jump);
+}
     const scoreElement = document.createElement('div');
     scoreElement.style.position = 'absolute';
     scoreElement.style.top = '10px';
