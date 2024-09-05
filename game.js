@@ -57,7 +57,6 @@ function startGame() {
     scoreElement.textContent = `Puntuación: ${score}`;
     gameContainer.appendChild(scoreElement);
 
-    // Función de salto
     function jump() {
         let jumpHeight = 100;
         character.style.transition = 'bottom 0.3s';
@@ -67,7 +66,6 @@ function startGame() {
         }, 300);
     }
 
-    // Crear obstáculos
     function createObstacle() {
         obstacle = document.createElement('div');
         obstacle.style.width = '50px';
@@ -101,7 +99,6 @@ function startGame() {
             const characterLeft = parseInt(character.style.left);
             const characterBottom = parseInt(character.style.bottom);
 
-            // Colisión con el obstáculo
             if (
                 obstacleLeft < characterLeft + 50 &&
                 obstacleLeft + 50 > characterLeft &&
@@ -125,7 +122,6 @@ function startGame() {
         }, 20);
     }
 
-    // Agregar el personaje al juego
     character = document.createElement('img');
     character.src = 'instagram-logo2.png';
     character.style.width = '50px';
@@ -135,11 +131,12 @@ function startGame() {
     character.style.left = '10px';
     gameContainer.appendChild(character);
 
-    // Evento para el botón de iniciar (teclado y pantalla táctil)
+    // Permitir que el jugador toque la pantalla para saltar
     gameContainer.addEventListener('touchstart', jump);
+
+    // Evento de teclado para saltar
     document.addEventListener('keydown', jump);
 
-    // Crear obstáculos de forma periódica
     setInterval(createObstacle, 2000);
 }
 
@@ -148,4 +145,3 @@ document.getElementById('start-button').addEventListener('click', startGame);
 
 // Cargar el ranking al inicio
 displayTopScores();
-
