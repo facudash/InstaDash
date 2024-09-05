@@ -138,10 +138,11 @@ function startGame() {
     document.addEventListener('keydown', jump);
 
     setInterval(createObstacle, 2000);
+    document.getElementById('start-button').addEventListener('click', startGame);
 }
-
+displayTopScores();
 // Evento para el botón de iniciar
-document.getElementById('start-button').addEventListener('click', startGame);
+
 
 // Cargar el ranking al inicio
-displayTopScores();
+
