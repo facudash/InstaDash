@@ -20,6 +20,7 @@ body, html {
     z-index: -1; /* Asegura que el video esté detrás de todo */
 }
 
+
 #menu-container {
     position: absolute;
     top: 0;
@@ -83,53 +84,4 @@ body, html {
     left: 10px;
     font-size: 14px;
     color: white;
-}
-
-/* Media Query para pantallas más pequeñas (teléfonos) */
-@media only screen and (max-width: 600px) {
-    #game-container {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #menu-container {
-        width: 100%;
-        height: 100%;
-        font-size: 14px;
-    }
-
-    #game-title {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
-
-    #start-button {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    #ranking-container {
-        width: 90%;
-        max-width: 350px;
-        padding: 10px;
-    }
-
-    #ranking-list {
-        font-size: 12px;
-    }
-
-    img {
-        width: 40px;
-        height: 40px;
-    }
-
-    #background-video {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-
-    #credits {
-        font-size: 10px;
-    }
 }
