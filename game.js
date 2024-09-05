@@ -47,7 +47,6 @@ function startGame() {
     let character, obstacle;
     let score = 0;
 
-    // Mostrar la puntuación
     const scoreElement = document.createElement('div');
     scoreElement.style.position = 'absolute';
     scoreElement.style.top = '10px';
@@ -131,17 +130,13 @@ function startGame() {
     character.style.left = '10px';
     gameContainer.appendChild(character);
 
- 
-
-    // Evento de teclado para saltar
     document.addEventListener('keydown', jump);
-
     setInterval(createObstacle, 2000);
-    document.getElementById('start-button').addEventListener('click', startGame);
 }
-displayTopScores();
-// Evento para el botón de iniciar
 
+// Evento para el botón de iniciar
+document.getElementById('start-button').addEventListener('click', startGame);
 
 // Cargar el ranking al inicio
+displayTopScores();
 
